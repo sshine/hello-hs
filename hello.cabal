@@ -1,0 +1,73 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 32b166e809534a063d28fe2140967572bc4eb8c7516567f07a9d666e32f7c411
+
+name:           hello
+version:        0.1.0
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Hello
+  other-modules:
+      Paths_hello
+  hs-source-dirs:
+      src
+  default-extensions: OverloadedStrings
+  build-depends:
+      base
+    , optparse-generic
+  default-language: Haskell2010
+
+executable hello
+  main-is: app/Main.hs
+  other-modules:
+      Paths_hello
+  default-extensions: OverloadedStrings
+  build-depends:
+      base
+    , hello
+    , optparse-generic
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: test.hs
+  other-modules:
+      Paths_hello
+  hs-source-dirs:
+      test
+  default-extensions: OverloadedStrings
+  build-depends:
+      base
+    , hedgehog
+    , hspec
+    , jq
+    , optparse-generic
+    , tasty
+    , tasty-discover
+    , tasty-hedgehog
+    , tasty-hspec
+  default-language: Haskell2010
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  main-is: bench.hs
+  other-modules:
+      Paths_hello
+  hs-source-dirs:
+      bench
+  default-extensions: OverloadedStrings
+  ghc-options: -O2
+  build-depends:
+      base
+    , criterion
+    , hello
+    , optparse-generic
+  default-language: Haskell2010
