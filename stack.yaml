@@ -2,6 +2,3 @@ resolver: lts-17.5
 packages:
   - .
 extra-deps: []
-#image:
-#  container:
-#    base: hello:base
