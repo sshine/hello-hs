@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 32b166e809534a063d28fe2140967572bc4eb8c7516567f07a9d666e32f7c411
+-- hash: 03c9ddf66fecdb599b1d4dba0cfbd3c7f0bf3729a981e38260f3f311b9bbaecc
 
 name:           hello
 version:        0.1.0
@@ -19,7 +19,8 @@ library
       Paths_hello
   hs-source-dirs:
       src
-  default-extensions: OverloadedStrings
+  default-extensions:
+      OverloadedStrings
   build-depends:
       base
     , optparse-generic
@@ -29,7 +30,8 @@ executable hello
   main-is: app/Main.hs
   other-modules:
       Paths_hello
-  default-extensions: OverloadedStrings
+  default-extensions:
+      OverloadedStrings
   build-depends:
       base
     , hello
@@ -43,7 +45,8 @@ test-suite test
       Paths_hello
   hs-source-dirs:
       test
-  default-extensions: OverloadedStrings
+  default-extensions:
+      OverloadedStrings
   build-depends:
       base
     , hedgehog
@@ -63,7 +66,8 @@ benchmark bench
       Paths_hello
   hs-source-dirs:
       bench
-  default-extensions: OverloadedStrings
+  default-extensions:
+      OverloadedStrings
   ghc-options: -O2
   build-depends:
       base
