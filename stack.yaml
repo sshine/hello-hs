@@ -1,4 +1,1 @@
-resolver: lts-18.0
-packages:
-  - .
-extra-deps: []
+resolver: lts-18.10
