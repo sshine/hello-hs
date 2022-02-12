@@ -41,6 +41,11 @@ jobs:
       - run: cabal install tasty-discover
       - run: cabal build $CONFIG
       - run: cabal test $CONFIG --test-show-details=always
+      - uses: haskell/actions/hlint-setup@v1
+      - uses: haskell/actions/hlint-run@v1
+        with:
+          path: src/
+          fail-on: warning
       - run: cabal bench $CONFIG
       - run: cabal haddock $CONFIG
       - run: cabal sdist
